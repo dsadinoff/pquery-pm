@@ -37,6 +37,11 @@ sub PQUERY {
     return 'PQUERY'->new(@_);
 }
 
+sub reset{
+    $my = {};
+    undef $document;
+}
+
 #------------------------------------------------------------------------------#
 # New ideas / Playing around stuffs
 #------------------------------------------------------------------------------#
@@ -1136,6 +1141,11 @@ return a HTML::Response object.
 
 This method returns the index number of its argument if the elem is in the
 current pQuery object. Otherwise it returns -1.
+
+
+=head2 reset()
+
+This method releases resources associated with pQuery and prevents memory leaks
 
 =head1 UNDER CONSTRUCTION
 
